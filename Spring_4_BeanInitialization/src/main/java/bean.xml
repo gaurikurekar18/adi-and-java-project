@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student1" class="com.aadi.Student">
+        <property name="id" value="1" />
+        <property name="name" value="Raja" />
+        <property name="address" ref="address1" />
+        <property name="marks" value="99.99" />
+
+        <property name="subjects">
+            <array>
+                <value>Spring</value>
+                <value>Angular</value>
+                <value>HTML</value>
+            </array>
+        </property>
+
+        <property name="skills">
+            <list>
+                <value>Communication</value>
+                <value>Leadership</value>
+                <value>Content Creater</value>
+            </list>
+        </property>
+
+        <property name="course" ref="course1" />
+    </bean>
+
+    <bean id="student2" class="com.aadi.Student">
+        <property name="id" value="2" />
+        <property name="name" value="rohit" />
+        <property name="address" ref="address2" />
+        <property name="marks" value="34.49" />
+
+        <property name="subjects">
+            <array>
+                <value>JAVA</value>
+                <value>c++</value>
+                <value>Python</value>
+            </array>
+        </property>
+
+        <property name="skills">
+            <list>
+                <value>Subject Expert</value>
+                <value>Team Leader</value>
+                <value>Reelstar</value>
+            </list>
+        </property>
+
+
+
+
+
+
+        <property name="course" ref="course2" />
+    </bean>
+
+    <bean id="course1" class="com.aadi.Course">
+        <property name="id" value="11111" />
+        <property name="courseName" value="Full Stack Java" />
+        <property name="price" value="100000" />
+    </bean>
+
+    <bean id="course2" class="com.aadi.Course">
+        <property name="id" value="22222" />
+        <property name="courseName" value="Full Stack Python" />
+        <property name="price" value="100000" />
+    </bean>
+
+    <bean id="address1" class="com.aadi.Address">
+        <property name="areaName" value="Ghule Park Hadapsar" />
+        <property name="city" value="Hadapsar, Pune" />
+        <property name="state" value="Maharashtra" />
+        <property name="pincode" value="441304" />
+        <property name="floor" value="4th floor" />
+        <property name="buildingName" value="Kalyani Building" />
+    </bean>
+
+    <bean id="address2" class="com.aadi.Address">
+        <property name="areaName" value="Andheri East" />
+        <property name="city" value="Mumbai" />
+        <property name="state" value="Maharashtra" />
+        <property name="pincode" value="400069" />
+        <property name="floor" value="2nd floor" />
+        <property name="buildingName" value="Sai Building" />
+    </bean>
+
+</beans>

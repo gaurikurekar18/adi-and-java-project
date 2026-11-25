@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="paymentService1" class="com.aadi.PaymentService" autowire="constructor">
+      
+   
+   <!-- -
+   <constructor-arg ref="upi"></constructor-arg>
+   <property name="Payment" ref="debit"></property>
+    -->
+   </bean>
+   
+   <bean id="paymentService2" class="com.aadi.PaymentService"></bean>
+
+ <bean id="paymentService3" class="com.aadi.PaymentService"></bean>
+
+
+
+ <bean id="upi1" class="com.aadi.UPIPayment"></bean>
+   
+<bean id="upi2" class="com.aadi.UPIPayment"></bean>
+
+<bean id="upi3" class="com.aadi.UPIPayment"></bean>
+     
+     
+   
+   <bean id="debit" class="com.aadi.DebitCardPayment" primary="true"></bean>
+   
+   <bean id="credit" class="com.aadi.CreditCardPayment"></bean>
+
+</beans>
